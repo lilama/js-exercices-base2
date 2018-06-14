@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<!-- 		Exercice 11 - utilisation des boucles et tests
+
+		Créer un bouton. Au click de ce bouton, lancer la fonction calculMoyenne.
+
+		Cette fonction va calculer la moyenne des nombres entrés au clavier :
+
+    	demande à l'utilisateur d'entrer un nombre entier.
+    	si l'utilisateur entre autre chose qu'un nombre entier, un message d'alerte signale l'erreur et ensuite, la fonction redemande à l'utilisateur d'entrer un nombre entier.
+    	tant que le nombre entré est positif ou nul, la fonction mémorise ce nombre et l'additionne aux autres nombres précédemment entrés.
+    	si le nombre est négatif, alors la fonction calcule la moyenne de tous les nombres entrés en divisant la somme totale par le nombre de valeurs entrées.
+    	la fonction affiche le nombre de valeurs entrées
+    	la fonction affiche la moyenne -->
+
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<button type="button" name="button" id="buttonCalculMoyenne">Calcul Moyenne</button>
+		<script type="text/javascript">
+			var buttonCalculMoyenne=document.getElementById("buttonCalculMoyenne");
+			buttonCalculMoyenne.addEventListener("click", function(){
+				calculMoyenne();
+			});
+
+			function calculMoyenne(){
+				var entier=parseInt(prompt("Entrer un nombre entier: "));
+				var result = 0,
+					i = 0,
+					moyenne = 0;
+				while (!(Number.isInteger(entier))) {
+					alert("Vous n'avez pas entré un nombre entier ! \n Veuillez recommencer" );
+					entier=parseInt(prompt("Entrer un nombre entier: "));
+				}
+
+				while (entier>=0) {
+					result += entier;
+					i++;
+					entier=parseInt(prompt("Entrer un nombre entier: "));
+					while (!(Number.isInteger(entier))) {
+					alert("Vous n'avez pas entré un nombre entier ! \n Veuillez recommencer" );
+					entier=parseInt(prompt("Entrer un nombre entier: "));
+					}
+				}
+				
+				if ( i > 0) {
+					moyenne = result / i;
+					alert("Nombre de valeurs entrées: " + i + "\n" + "Moyenne: " + moyenne);	
+				}
+				else {
+					alert("Vous n'avez pas entré de valeur correcte");	
+				}				
+			}
+
+		</script>
+	</body>
+</html>

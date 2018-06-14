@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Exercice 8 - utilisation de switch et de l'objet date
+
+		Créer un bouton. Au click de ce bouton, lancer la fonction jourDeLaSemaine(). Cette fonction détermine le jour de la semaine et affiche selon le cas dimanche, lundi, mardi... etc. jusqu'à samedi. -->
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<button type="button" name="button" id="buttonJourSemaine">Jour de la semaine</button>
+		<script type="text/javascript">
+			var buttonJourSemaine=document.getElementById("buttonJourSemaine");
+			buttonJourSemaine.addEventListener("click", function(e){
+				jourDeLaSemaine();
+			});
+			function jourDeLaSemaine() {
+				var newDate = new Date();
+				switch(newDate.getDay()) {
+					case 0:  alert("Nous sommes Dimanche");
+					break;
+					case 1:  alert("Nous sommes Lundi");
+					break;
+					case 2:  alert("Nous sommes Mardi");
+					break;
+					case 3:  alert("Nous sommes Mercredi");
+					break;
+					case 4:  alert("Nous sommes Jeudi");
+					break;
+					case 5:  alert("Nous sommes Vendredi");
+					break;
+					case 6:  alert("Nous sommes Samedi");
+					break;
+					default: alert("Problème Jour Système!"); 
+				};	
+			}
+		</script>
+	</body>
+</html>

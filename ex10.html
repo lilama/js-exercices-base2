@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Exercice 10 - utilisation de la boucle for
+
+		Créer un bouton. Au click de ce bouton, lancer la fonction somme. Cette fonction demande trois fois à l'utilisateur de saisir un nombre et affiche ensuite la somme de ces trois nombres. -->
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<button type="button" name="button" id="buttonSomme">Somme</button>
+		<script type="text/javascript">
+			var buttonSomme = document.getElementById("buttonSomme");
+			buttonSomme.addEventListener("click", function(e) {
+				somme();
+			});
+			function somme() {
+				var nombre = 0,
+					resultat = 0;
+				for (var i = 0; i<3; i++) {
+					nombre = parseInt(prompt("Veuillez saisir un nombre: "));
+					resultat += nombre;
+				};
+				alert("la somme des 3 nombres saisis est: " + resultat);
+			}
+		</script>
+	</body>
+</html>

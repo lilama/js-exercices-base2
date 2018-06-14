@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Exercice 1 - écriture d'une fonction
+
+		Créer un bouton "Calculer la surface d'un rectangle". Faites en sorte que lorsqu'on clique sur le bouton, la fonction surfaceRectagle() se lance. Cette fonction va demander la saisie d'une largeur, d'une longueur et afficher la surface du rectangle correspondant.
+
+		Créer ensuite un nouveau bouton "Calculer le périmètre d'un rectangle". Faites en sorte que lorsqu'on clique sur le bouton, la fonction periRectangle() se lance. Cette fonction va demander la saisie d'une largeur, d'une longueur et afficher le périmètre du rectangle.
+
+		Pour l'affichage des résultats, pensez à mettre du texte pour qu'on sache à quoi se réfère les réponses finales ! -->
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<form>
+			<button type="button" name="button" id="buttonSurface">Calculer la surface d'un rectangle</button>
+
+			<button type="button" name="button" id="buttonPerimetre">Calculer le périmètre d'un rectange</button>
+		</form>
+
+		<script>
+			var buttonSurface = document.getElementById("buttonSurface");
+
+			var buttonPerimetre = document.getElementById("buttonPerimetre");
+			
+			buttonSurface.addEventListener('click', function(e) {
+				surfaceRectangle();
+			});
+
+			buttonPerimetre.addEventListener('click', function(e) {
+				periRectangle();
+			});
+
+			function surfaceRectangle() {
+				var largeur = parseFloat(prompt('Saisir une largeur:'));
+				var longueur = parseFloat(prompt('Saisir une longueur'));
+
+				alert("La surface du rectangle est de : " + largeur * longueur);
+			};
+
+			function periRectangle() {
+				var largeur = parseFloat(prompt('Saisir une largeur:'));
+				var longueur = parseFloat(prompt('Saisir une longueur'));
+				alert("Le périmètre du rectangle est de : " + (largeur + longueur)*2);
+			};
+
+		</script>
+	</body>
+</html>

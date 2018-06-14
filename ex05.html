@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Exercice 5 - manipulation des opérateurs
+
+		b est toujours initialisée à 2 Quel est le résultat des opérations suivantes ?
+
+    	a=b++;
+    	a=++b;
+    	a=b--;
+    	a=--b;
+    	a+=b++;
+    	a=1; a+=++b;
+    	a=1; a-=b++;
+    	a=1; a-=++b;
+    	a=1; a+=b--;
+    	a=1; a+=--b;
+
+		Pour chacune des opérations, afficher l'opération effectuée, la valeur de a après l'opération et la valeur de b après l'opération. -->
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script type="text/javascript">
+			// var b = 2, a;
+			function un() {
+				var b = 2, a;
+				a = b++;
+				alert("a=b++" + " => " + "a = " + a + "; b = " + b);
+			}
+			un();
+
+			function deux() {
+				var b = 2, a;
+				a=++b;
+				alert("a=++b" + " => " + "a = " + a + "; b = " + b);
+			}
+			deux();
+
+			function trois() {
+				var b = 2, a;
+				a=b--;
+				alert("a=b--" + " => " + "a = " + a + "; b = " + b);
+			}
+			trois();
+
+			function quatre() {
+				var b = 2, a;
+				a=--b;
+				alert("a=--b" + " => " + "a = " + a + "; b = " + b);
+			}
+			quatre();
+
+			function cinq() {
+				var b = 2, a;
+				a+=b++;
+				alert("a+=b++" + " => " + "a = " + a + "; b = " + b);
+			}
+			cinq();
+
+			function six() {
+				var b = 2, a;
+				a=1;
+				a+=++b;
+				alert("a+=++b" + " => " + "a = " + a + "; b = " + b);
+			}
+			six();
+
+			function sept() {
+				var b = 2, a;
+				a=1;
+				a-=b++;
+				alert("a-=b++" + " => " + "a = " + a + "; b = " + b);
+			}
+			sept();
+
+			function huit() {
+				var b = 2, a;
+				a=1;
+				a-=++b;
+				alert("a-=++b" + " => " + "a = " + a + "; b = " + b);
+			}
+			huit();
+
+			function neuf() {
+				var b = 2, a;
+				a=1;
+				a+=b--;
+				alert("a+=b--" + " => " + "a = " + a + "; b = " + b);
+			}
+			neuf();
+
+			function dix() {
+				var b = 2, a;
+				a=1;
+				a+=--b;
+				alert("a+=--b" + " => " + "a = " + a + "; b = " + b);
+			}
+			dix();
+			
+		</script>
+	</body>
+</html>

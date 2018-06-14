@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Exercice 2 - écriture d'une fonction renvoyant une valeur
+
+		Créer une fonction qui :
+		    demande la saisie d'un rayon;
+    		retourne la surface du cercle de ce rayon. Afficher ensuite le résultat de l'appel à cette fonction en cliquant sur un bouton.
+ 		-->
+		<!-- surface du cercle  est égale à : π × R2. -->
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<button type="button" name="button" id="buttonSurfaceCercle">Calcul Surface du cercle</button>
+		
+		<script type="text/javascript">
+			var buttonSurfaceCercle = document.getElementById("buttonSurfaceCercle");
+			buttonSurfaceCercle.addEventListener("click", function(e) {alert("Surface du cercle: " + surfaceCercle());});
+
+			function surfaceCercle() {	
+			var rayon = parseFloat(prompt('Saisir un rayon: '));
+			return Math.PI * Math.pow(rayon,2);
+			};
+		</script>
+	</body>
+</html>
